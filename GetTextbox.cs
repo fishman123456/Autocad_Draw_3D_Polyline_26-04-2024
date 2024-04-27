@@ -1,23 +1,48 @@
-﻿using System;
+﻿using Autodesk.AutoCAD.Runtime;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace Autocad_Draw_3D_Polyline_26_04_2024
 {
+   
     public  class GetTextbox
     {
-        public string stringsLay = string.Empty;
-        public string stringsCoor = string.Empty;
-        public void StrToList(string strLay, string strCoor)
+        // 
+
+        // строка для хранения данных полученных из textbox
+        public static string stringsLay = "тест";
+        public static string stringsCoor = string.Empty;
+        // список разбитых данных берем из массива
+        public static List<string> layList = new List<string>();
+        public static List<string> coorList = new List<string>();
+        // // массив для хранения данных полученных из textbox
+        public string[] massLay = new string[] { };
+        public string[] massCoor = new string[] { };
+        // функция для разделения по переносам
+
+        public  void StrToList(string strLay, string strCoor)
         {
+            
             if (strLay != string.Empty)
             {
                 // разделитель строк
-                string[] separator = new string[] {"\n","\r" };
-            // разделяем строку на подстроки по "\n","\r"
-            string[] subs = strLay.Split(separator, StringSplitOptions.RemoveEmptyEntries);    
+                string[] separator = new string[] { "\n", "\r" };
+                // разделяем строку на подстроки по "\n","\r"
+                massLay = strLay.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                 massCoor = strCoor.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            }
+            foreach(string item in massLay)
+            {
+                layList.Add(item);
+            }
+            foreach (string item in massCoor)
+            {
+                coorList.Add(item);
             }
         }
     }

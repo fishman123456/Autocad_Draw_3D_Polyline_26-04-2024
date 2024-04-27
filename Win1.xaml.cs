@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autodesk.AutoCAD.Runtime;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,15 +21,34 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
     /// </summary>
     public partial class Win1 : Window
     {
+        
         public Win1()
         {
             InitializeComponent();  
         }
-        GetTextbox getTextbox = new GetTextbox();
+
         private void AddLay_Click(object sender, RoutedEventArgs e)
         {
-            getTextbox.stringsLay = (TextboxLayer.Text);
-            getTextbox.stringsCoor = (TextboxCoor.Text);
+            GetTextbox getTextbox = new GetTextbox();
+            GetTextbox.stringsLay = (TextboxLayer.Text.ToString());
+            GetTextbox.stringsCoor = (TextboxCoor.Text.ToString());
+            getTextbox.StrToList(TextboxLayer.Text,TextboxCoor.Text);
+            ClassDraw3dPline classDraw3DPline = new ClassDraw3dPline();
+            classDraw3DPline.Draw3dPline();
+            Win1 win1 = new Win1();
+            win1.Close();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+           
+
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            TextboxCoor.Clear();
+            TextboxLayer.Clear();
         }
     }
 }
