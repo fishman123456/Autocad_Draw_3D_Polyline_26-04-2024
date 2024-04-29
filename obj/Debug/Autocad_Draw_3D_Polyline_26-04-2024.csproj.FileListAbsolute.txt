@@ -39,3 +39,15 @@ C:\Users\Fishman\Documents\GitHub\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\
 C:\Users\Fishman\Documents\GitHub\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_.35F13BD4.Up2Date
 C:\Users\Fishman\Documents\GitHub\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024.dll
 C:\Users\Fishman\Documents\GitHub\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024.pdb
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\bin\Debug\Autocad_Draw_3D_Polyline_26-04-2024.dll
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\bin\Debug\Autocad_Draw_3D_Polyline_26-04-2024.pdb
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024.csproj.AssemblyReference.cache
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Win1.g.cs
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024_MarkupCompile.cache
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024_MarkupCompile.lref
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Win1.baml
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024.g.resources
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024.csproj.CoreCompileInputs.cache
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_.35F13BD4.Up2Date
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024.dll
+D:\Github\Autocad_Draw_3D_Polyline_26-04-2024\obj\Debug\Autocad_Draw_3D_Polyline_26-04-2024.pdb

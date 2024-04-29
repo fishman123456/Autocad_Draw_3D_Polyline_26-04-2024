@@ -49,13 +49,14 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
 
                         LayerTable lt = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead);
 
-                        if (lt.Has(GetTextbox.stringsLay.ToString()))
+                        if (lt.Has(GetTextbox.stringsLay.ToString())|| GetTextbox.stringsLay.ToString()=="")
                         {
-                            doc.Editor.WriteMessage("рисуем полилинию");
-                            MessageBox.Show("Такой слой уже есть");
+                            
+                            MessageBox.Show("Такой слой уже есть или пустая строка");
                         }
                         else
                         {
+                            doc.Editor.WriteMessage("рисуем полилинию");
                             LayerTableRecord ltr = new LayerTableRecord();
                             ltr.Name = GetTextbox.stringsLay.ToString();
                             lt.UpgradeOpen();

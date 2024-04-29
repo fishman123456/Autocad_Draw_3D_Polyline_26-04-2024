@@ -24,7 +24,8 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         
         public Win1()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            this.Closed += new EventHandler(MainWindow_Closed);
         }
 
         private void AddLay_Click(object sender, RoutedEventArgs e)
@@ -35,8 +36,6 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
             getTextbox.StrToList(TextboxLayer.Text,TextboxCoor.Text);
             ClassDraw3dPline classDraw3DPline = new ClassDraw3dPline();
             classDraw3DPline.Draw3dPline();
-            Win1 win1 = new Win1();
-            win1.Close();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -49,6 +48,14 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         {
             TextboxCoor.Clear();
             TextboxLayer.Clear();
+        }
+
+        void MainWindow_Closed(object sender, EventArgs e)
+        {
+            if (CountWin.Count == 1)
+            {
+                CountWin.Count=0;
+            }
         }
     }
 }
