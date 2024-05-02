@@ -30,6 +30,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
                 win1.Show();
                 CountWin.Count++;
             }
+            GetTextbox textbox = new GetTextbox();
             Document doc = Application.DocumentManager.MdiActiveDocument;
             Database db = doc.Database;
             // блокируем документ
@@ -66,10 +67,23 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
                         }
                         // координаты, потом будем передавать списком
                         Point3dCollection pointUser3d = new Point3dCollection();
-                        pointUser3d.Add(new Point3d(1000, 0, 0));
-                        pointUser3d.Add(new Point3d(0, 100, 0));
-                        pointUser3d.Add(new Point3d(0, 0, 500));
-                        pointUser3d.Add(new Point3d(500, 0, 0));
+                        // передаём координаты из текстбокса 02-05-2024
+                        textbox.StrToList(GetTextbox.stringsLay, GetTextbox.stringsCoor);
+                        foreach (var item in textbox.coorList)
+                        {
+                            String[] words = item.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                            int x = int.Parse(words[0].ToString());
+                            int y = int.Parse(words[1].ToString());
+                            int z = int.Parse(words[2].ToString());
+                            if (words.Length > 0)
+                            {
+                                pointUser3d.Add(new Point3d(x,y,z));
+                            }
+                        }
+                        //pointUser3d.Add(new Point3d(1000, 0, 0));
+                        //pointUser3d.Add(new Point3d(0, 100, 0));
+                        //pointUser3d.Add(new Point3d(0, 0, 500));
+                        //pointUser3d.Add(new Point3d(500, 0, 0));
                         var p1 = new Polyline3d(Poly3dType.SimplePoly, pointUser3d, false);
                         btr.AppendEntity(p1);
                         btr.Database.TransactionManager.TopTransaction.AddNewlyCreatedDBObject(p1, true);

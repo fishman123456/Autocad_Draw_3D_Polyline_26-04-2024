@@ -18,14 +18,14 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         public static string stringsLay = "тест";
         public static string stringsCoor = string.Empty;
         // список разбитых данных берем из массива
-        public static List<string> layList = new List<string>();
-        public static List<string> coorList = new List<string>();
+        public  List<string> layList = new List<string>();
+        public  List<string> coorList = new List<string>();
         // // массив для хранения данных полученных из textbox
         public string[] massLay = new string[] { };
         public string[] massCoor = new string[] { };
         // функция для разделения по переносам
 
-        public  void StrToList(string strLay, string strCoor)
+        public  List<string> StrToList(string strLay, string strCoor)
         {
             
             if (strLay != string.Empty)
@@ -44,6 +44,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
             {
                 coorList.Add(item);
             }
+            return coorList;
         }
     }
 }
