@@ -21,6 +21,8 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
     // создаём 3д полилинию
     public class ClassDraw3dPline
     {
+        GetTextbox textbox1 = new GetTextbox();
+        
         [CommandMethod("U84Draw3dPline")]
         public void Draw3dPline()
         {
@@ -33,7 +35,13 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
             }
             // проверка по дате
             CheckDateWork.CheckDate();
-            GetTextbox textbox = new GetTextbox();
+            // пробуем запустить функцию добавления в списки
+            textbox1.listAll(GetTextbox.stringsLay,GetTextbox.stringsCoorStart,
+                GetTextbox.stringsCoorN, GetTextbox.stringsCoorEnd);
+            // переменная для елементов спска 
+            int countListN = 0;
+            int countListStart = 0;
+            int countListEnd = 0;
             Document doc = Application.DocumentManager.MdiActiveDocument;
             Database db = doc.Database;
             // блокируем документ
@@ -49,45 +57,75 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
                         bt = tr.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
                         BlockTableRecord btr = new BlockTableRecord();
                         btr = tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite) as BlockTableRecord;
-                        // слои пробуем добавить
 
-                        LayerTable lt = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead);
-
-                        if (lt.Has(GetTextbox.stringsLay.ToString()) || GetTextbox.stringsLay.ToString() == "")
+                        // слои пробуем добавить через цикл
+                        foreach (string itemLayer in GetTextbox.layList)
                         {
+                            LayerTable lt = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead);
 
-                            MessageBox.Show("Такой слой уже есть или пустая строка");
-                        }
-                        else
-                        {
-                            doc.Editor.WriteMessage("рисуем полилинию");
-                            LayerTableRecord ltr = new LayerTableRecord();
-                            ltr.Name = GetTextbox.stringsLay.ToString();
-                            lt.UpgradeOpen();
-                            ObjectId ltId = lt.Add(ltr);
-                            tr.AddNewlyCreatedDBObject(ltr, true);
-                            db.Clayer = ltId;
-                        }
-                        // координаты, потом будем передавать списком
-                        Point3dCollection pointUser3d = new Point3dCollection();
-                        // передаём координаты из текстбокса 02-05-2024
-                        textbox.StrToList(GetTextbox.stringsLay, GetTextbox.stringsCoor);
-                        foreach (var item in textbox.coorList)
-                        {
-                            String[] words = item.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                            double x = double.Parse(words[0]);
-                            double y = double.Parse(words[1]);
-                            double z = double.Parse(words[2]);
-                            pointUser3d.Add(new Point3d(x, y, z));
+                            if (lt.Has(itemLayer.ToString()))
+                            {
 
+                                MessageBox.Show("Такой слой уже есть!" + "/n" + itemLayer.ToString());
+                            }
+                            else
+                            {
+                                doc.Editor.WriteMessage("рисуем полилинию");
+                                LayerTableRecord ltr = new LayerTableRecord();
+                                ltr.Name = itemLayer.ToString();
+                                lt.UpgradeOpen();
+                                ObjectId ltId = lt.Add(ltr);
+                                tr.AddNewlyCreatedDBObject(ltr, true);
+                                db.Clayer = ltId;
+                            }
+                            // координаты, потом будем передавать списком
+                            Point3dCollection pointUser3d = new Point3dCollection();
+                            // передаем первую точку в координаты
+                            if (GetTextbox.coorListStart[countListStart].ToString() != "")
+                            {
+                                string[] start = GetTextbox.coorListStart[countListStart].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                                double Xstart = double.Parse(start[0]);
+                                double Ystart = double.Parse(start[1]);
+                                double Zstart = double.Parse(start[2]);
+                                pointUser3d.Add(new Point3d (Xstart, Ystart, Zstart));
+                                countListStart++;
+                            }
+
+                            // передаём координаты из текстбокса coorListN 02-05-2024
+                            if (GetTextbox.coorListN[countListN].ToString() != "")
+                            {
+                                foreach (var itemCoor in GetTextbox.coorListN)
+                                {
+                                    String[] words = itemCoor.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                                    double x = double.Parse(words[0]);
+                                    double y = double.Parse(words[1]);
+                                    double z = double.Parse(words[2]);
+                                    pointUser3d.Add(new Point3d(x, y, z));
+                                    countListN++;
+                                }
+                            }
+                            // передаем заключительную точку в координаты
+                            if (GetTextbox.coorListEnd[countListEnd].ToString() != "")
+                            {
+                                string[] end = GetTextbox.coorListEnd[countListEnd].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                                double Xend = double.Parse(end[0]);
+                                double Yend = double.Parse(end[1]);
+                                double Zend = double.Parse(end[2]);
+                                pointUser3d.Add(new Point3d(Xend, Yend, Zend));
+                                countListEnd++;
+                            }
+                            //pointUser3d.Add(new Point3d(1000, 0, 0));
+                            //pointUser3d.Add(new Point3d(0, 100, 0));
+                            //pointUser3d.Add(new Point3d(0, 0, 500));
+                            //pointUser3d.Add(new Point3d(500, 0, 0));
+
+                            using (var p1 = new Polyline3d(Poly3dType.SimplePoly, pointUser3d, false))
+                            {
+                                btr.AppendEntity(p1);
+                                btr.Database.TransactionManager.TopTransaction.AddNewlyCreatedDBObject(p1, true);
+                            }
+                            
                         }
-                        //pointUser3d.Add(new Point3d(1000, 0, 0));
-                        //pointUser3d.Add(new Point3d(0, 100, 0));
-                        //pointUser3d.Add(new Point3d(0, 0, 500));
-                        //pointUser3d.Add(new Point3d(500, 0, 0));
-                        var p1 = new Polyline3d(Poly3dType.SimplePoly, pointUser3d, false);
-                        btr.AppendEntity(p1);
-                        btr.Database.TransactionManager.TopTransaction.AddNewlyCreatedDBObject(p1, true);
                     }
                     catch (System.Exception ex)
                     {

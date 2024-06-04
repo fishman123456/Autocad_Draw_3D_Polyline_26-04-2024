@@ -32,8 +32,9 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         {
             GetTextbox getTextbox = new GetTextbox();
             GetTextbox.stringsLay = (TextboxLayer.Text.ToString());
-            GetTextbox.stringsCoor = (TextboxCoorStart.Text.ToString());
-            getTextbox.StrToList(TextboxLayer.Text,TextboxCoorStart.Text);
+            GetTextbox.stringsCoorStart = (TextboxCoorStart.Text.ToString());
+            GetTextbox.stringsCoorN =(TextboxCoorN.Text.ToString());
+            GetTextbox.stringsCoorEnd = (TextboxCoorEnd.Text.ToString());
             ClassDraw3dPline classDraw3DPline = new ClassDraw3dPline();
             classDraw3DPline.Draw3dPline();
         }
