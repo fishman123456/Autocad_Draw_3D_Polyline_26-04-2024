@@ -32,21 +32,21 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         {
             GetTextbox getTextbox = new GetTextbox();
             GetTextbox.stringsLay = (TextboxLayer.Text.ToString());
-            GetTextbox.stringsCoor = (TextboxCoor.Text.ToString());
-            getTextbox.StrToList(TextboxLayer.Text,TextboxCoor.Text);
+            GetTextbox.stringsCoor = (TextboxCoorStart.Text.ToString());
+            getTextbox.StrToList(TextboxLayer.Text,TextboxCoorStart.Text);
             ClassDraw3dPline classDraw3DPline = new ClassDraw3dPline();
             classDraw3DPline.Draw3dPline();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-           
+           this.Close();
 
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            TextboxCoor.Clear();
+            TextboxCoorStart.Clear();
             TextboxLayer.Clear();
         }
 
@@ -56,6 +56,12 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
             {
                 CountWin.Count=0;
             }
+        }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+           string strhelp = HelpText.textHelp().ToString();
+            MessageBox.Show(strhelp);
         }
     }
 }

@@ -24,12 +24,15 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         [CommandMethod("U84Draw3dPline")]
         public void Draw3dPline()
         {
+
             if (CountWin.Count == 0)
             {
                 Win1 win1 = new Win1();
                 win1.Show();
                 CountWin.Count++;
             }
+            // проверка по дате
+            CheckDateWork.CheckDate();
             GetTextbox textbox = new GetTextbox();
             Document doc = Application.DocumentManager.MdiActiveDocument;
             Database db = doc.Database;
@@ -50,9 +53,9 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
 
                         LayerTable lt = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead);
 
-                        if (lt.Has(GetTextbox.stringsLay.ToString())|| GetTextbox.stringsLay.ToString()=="")
+                        if (lt.Has(GetTextbox.stringsLay.ToString()) || GetTextbox.stringsLay.ToString() == "")
                         {
-                            
+
                             MessageBox.Show("Такой слой уже есть или пустая строка");
                         }
                         else
@@ -72,13 +75,11 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
                         foreach (var item in textbox.coorList)
                         {
                             String[] words = item.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                            int x = int.Parse(words[0].ToString());
-                            int y = int.Parse(words[1].ToString());
-                            int z = int.Parse(words[2].ToString());
-                            if (words.Length > 0)
-                            {
-                                pointUser3d.Add(new Point3d(x,y,z));
-                            }
+                            double x = double.Parse(words[0]);
+                            double y = double.Parse(words[1]);
+                            double z = double.Parse(words[2]);
+                            pointUser3d.Add(new Point3d(x, y, z));
+
                         }
                         //pointUser3d.Add(new Point3d(1000, 0, 0));
                         //pointUser3d.Add(new Point3d(0, 100, 0));
