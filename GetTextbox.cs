@@ -15,10 +15,10 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         // 
 
         // строка для хранения данных полученных из textbox
-       public static string stringsLay = string.Empty;
-       public static string stringsCoorStart = string.Empty;
-       public static string stringsCoorN = string.Empty;
-       public static string stringsCoorEnd = string.Empty;
+        public static string stringsLay = "";
+       public static string stringsCoorStart = "";
+       public static string stringsCoorN = "";
+       public static string stringsCoorEnd = "";
         // список разбитых данных берем из массива
         public static List<string> layList = new List<string>();
         public static List<string> coorListStart = new List<string>();

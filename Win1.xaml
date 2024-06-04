@@ -43,22 +43,22 @@
          FontSize="20" HorizontalAlignment="Center"></TextBlock>
         <!-- текстбоксы для ввода данных 04-06-2024-->
         <TextBox x:Name="TextboxLayer" Margin="10"
-                 Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="6" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" Text="первый"/>
+                 Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="6" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" />
         
         <TextBox x:Name="TextboxCoorStart" Margin = "10"
                  Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="6" 
                   VerticalScrollBarVisibility="Visible" AcceptsReturn="True"
-                 Text="1 2 3"/>
+                 />
 
         <TextBox x:Name="TextboxCoorN" Margin = "10"
           Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="6" 
            VerticalScrollBarVisibility="Visible" AcceptsReturn="True"
-                 Text="4 5 6"/>
+                 />
 
         <TextBox x:Name="TextboxCoorEnd" Margin = "10"
           Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="6" 
            VerticalScrollBarVisibility="Visible" AcceptsReturn="True"
-                 Text="100 200 300"/>
+                 />
         
         <Button x:Name="AddLay" Grid.Column="4" Grid.Row="8" Margin="10" FontSize="20" Content="Add" 
                 Command="{Binding AddCommand}" Click="AddLay_Click"></Button>

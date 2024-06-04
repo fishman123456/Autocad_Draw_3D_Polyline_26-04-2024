@@ -42,13 +42,21 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
            this.Close();
+            TextboxCoorStart.Clear();
+            TextboxCoorN.Clear();
+            TextboxCoorEnd.Clear();
+            TextboxLayer.Clear();
+            GetTextbox getTextbox = new GetTextbox();
 
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             TextboxCoorStart.Clear();
+            TextboxCoorN.Clear();
+            TextboxCoorEnd.Clear();
             TextboxLayer.Clear();
+            GetTextbox getTextbox = new GetTextbox();
         }
 
         void MainWindow_Closed(object sender, EventArgs e)

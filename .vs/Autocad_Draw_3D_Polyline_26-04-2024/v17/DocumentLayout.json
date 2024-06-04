@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\classdraw3dpline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|c:\\users\\fishman\\documents\\github\\autocad_draw_3d_polyline_26-04-2024\\classdraw3dpline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:classdraw3dpline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|c:\\users\\fishman\\documents\\github\\autocad_draw_3d_polyline_26-04-2024\\win1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\checkdatework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:checkdatework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\win1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:win1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\helptext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:helptext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\Win1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:Win1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\gettextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:gettextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\CountWin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:CountWin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\Win1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:Win1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\checkdatework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:checkdatework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\helptext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:helptext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\CountWin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E74D6EB3-02D3-47EA-A4DD-A1127BEEC52A}|Autocad_Draw_3D_Polyline_26-04-2024.csproj|solutionrelative:CountWin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "HelpText.cs",
               "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\HelpText.cs",
               "RelativeDocumentMoniker": "HelpText.cs",
@@ -98,27 +98,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "CheckDateWork.cs",
               "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\CheckDateWork.cs",
               "RelativeDocumentMoniker": "CheckDateWork.cs",
               "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\CheckDateWork.cs",
               "RelativeToolTip": "CheckDateWork.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwBAAAAAmAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvxYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T03:33:59.757Z"
+              "WhenOpened": "2024-05-02T03:33:59.757Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "GetTextbox.cs",
               "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\GetTextbox.cs",
               "RelativeDocumentMoniker": "GetTextbox.cs",
               "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\GetTextbox.cs",
               "RelativeToolTip": "GetTextbox.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAD4vysAAAAMAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAUwCwAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T09:04:02.85Z"
+              "WhenOpened": "2024-04-26T09:04:02.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,14 +130,14 @@
               "RelativeDocumentMoniker": "ClassDraw3dPline.cs",
               "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\ClassDraw3dPline.cs",
               "RelativeToolTip": "ClassDraw3dPline.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAWwCkAAAAfAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAiwEoAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T05:57:57.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CountWin.cs",
               "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\CountWin.cs",
               "RelativeDocumentMoniker": "CountWin.cs",
@@ -147,27 +149,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Win1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\Win1.xaml.cs",
               "RelativeDocumentMoniker": "Win1.xaml.cs",
               "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\Win1.xaml.cs",
               "RelativeToolTip": "Win1.xaml.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAQwCsAAAAYAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T08:04:21.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Win1.xaml",
               "DocumentMoniker": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\Win1.xaml",
               "RelativeDocumentMoniker": "Win1.xaml",
               "ToolTip": "C:\\Users\\Fishman\\Documents\\GitHub\\Autocad_Draw_3D_Polyline_26-04-2024\\Win1.xaml",
               "RelativeToolTip": "Win1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-26T07:52:12.577Z"
+              "WhenOpened": "2024-04-26T07:52:12.577Z",
+              "EditorCaption": ""
             }
           ]
         }
