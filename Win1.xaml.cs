@@ -21,7 +21,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
     /// </summary>
     public partial class Win1 : Window
     {
-        
+
         public Win1()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
             GetTextbox getTextbox = new GetTextbox();
             GetTextbox.stringsLay = (TextboxLayer.Text.ToString());
             GetTextbox.stringsCoorStart = (TextboxCoorStart.Text.ToString());
-            GetTextbox.stringsCoorN =(TextboxCoorN.Text.ToString());
+            GetTextbox.stringsCoorN = (TextboxCoorN.Text.ToString());
             GetTextbox.stringsCoorEnd = (TextboxCoorEnd.Text.ToString());
             ClassDraw3dPline classDraw3DPline = new ClassDraw3dPline();
             classDraw3DPline.Draw3dPline();
@@ -41,7 +41,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-           this.Close();
+            this.Close();
             TextboxCoorStart.Clear();
             TextboxCoorN.Clear();
             TextboxCoorEnd.Clear();
@@ -63,14 +63,23 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         {
             if (CountWin.Count == 1)
             {
-                CountWin.Count=0;
+                CountWin.Count = 0;
             }
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-           string strhelp = HelpText.textHelp().ToString();
+            string strhelp = HelpText.textHelp().ToString();
             MessageBox.Show(strhelp);
+        }
+
+        private void Clear_mass_Click(object sender, RoutedEventArgs e)
+        {
+           GetTextbox.massCoorEnd = new string [] { } ;
+           GetTextbox.massCoorN =  new string[] { }; 
+        GetTextbox.massLay = new string[] { };
+            GetTextbox.massCoorStart = new string[] { };
         }
     }
 }
+

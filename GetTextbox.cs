@@ -15,7 +15,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         // 
 
         // строка для хранения данных полученных из textbox
-        public static string stringsLay = "";
+       public static string stringsLay = "";
        public static string stringsCoorStart = "";
        public static string stringsCoorN = "";
        public static string stringsCoorEnd = "";
@@ -25,10 +25,10 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         public static List<string> coorListN = new List<string>();
         public static List<string> coorListEnd = new List<string>();
         // // массив для хранения данных полученных из textbox
-        static string[] massLay = new string[] { };
-        static string[] massCoorStart = new string[] { };
-        static string[] massCoorN = new string[] { };
-        static string[] massCoorEnd = new string[] { };
+        public static string[] massLay = new string[] { };
+        public static string[] massCoorStart = new string[] { };
+        public static string[] massCoorN = new string[] { };
+        public static string[] massCoorEnd = new string[] { };
         // функция для разделения по переносам
         public void listAll(string strLay, string strCoorStart,string strCoorN,string strCoorEnd)
         {
@@ -38,7 +38,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
                 string[] separator = new string[] { "\n", "\r" };
                 // разделяем строку на подстроки по "\n","\r"
                 massLay = strLay.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                 massCoorStart = strCoorStart.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                massCoorStart = strCoorStart.Split(separator, StringSplitOptions.RemoveEmptyEntries);
                 massCoorN = strCoorN.Split(separator, StringSplitOptions.RemoveEmptyEntries);
                 massCoorEnd = strCoorEnd.Split(separator, StringSplitOptions.RemoveEmptyEntries);
             }
@@ -58,7 +58,8 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
             {
                 coorListEnd.Add(item);
             }
-            
+
+           
         }
 
     }
