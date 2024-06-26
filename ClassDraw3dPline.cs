@@ -66,7 +66,8 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
                             if (lt.Has(itemLayer.ToString()))
                             {
 
-                                MessageBox.Show("Такой слой уже есть!" + "/n" + itemLayer.ToString());
+                                MessageBox.Show("Такой слой уже есть!" + "   " + itemLayer.ToString() + "   " + "Закрываем приложение");
+                                //System.Windows.Application.Current.Shutdown();
                             }
                             else
                             {
