@@ -17,7 +17,7 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
         public static void CheckDate()
         {
             DateTime dt1 = DateTime.Now;
-            DateTime dt2 = DateTime.Parse("20/08/2024");
+            DateTime dt2 = DateTime.Parse("20/08/2025");
             Window w1 = new Window();
        
             if (dt1.Date > dt2.Date)

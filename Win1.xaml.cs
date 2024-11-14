@@ -37,6 +37,10 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
             GetTextbox.stringsCoorEnd = (TextboxCoorEnd.Text.ToString());
             ClassDraw3dPline classDraw3DPline = new ClassDraw3dPline();
             classDraw3DPline.Draw3dPline();
+            GetTextbox.massCoorEnd = new string[] { };
+            GetTextbox.massCoorN = new string[] { };
+            GetTextbox.massLay = new string[] { };
+            GetTextbox.massCoorStart = new string[] { };
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -75,9 +79,9 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
 
         private void Clear_mass_Click(object sender, RoutedEventArgs e)
         {
-           GetTextbox.massCoorEnd = new string [] { } ;
-           GetTextbox.massCoorN =  new string[] { }; 
-        GetTextbox.massLay = new string[] { };
+            GetTextbox.massCoorEnd = new string[] { };
+            GetTextbox.massCoorN = new string[] { };
+            GetTextbox.massLay = new string[] { };
             GetTextbox.massCoorStart = new string[] { };
         }
     }

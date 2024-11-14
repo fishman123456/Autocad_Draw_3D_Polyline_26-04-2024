@@ -54,6 +54,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePolylineVertex.cs" />
     <Compile Include="CheckDateWork.cs" />
     <Compile Include="ClassDraw3dPline.cs" />
     <Compile Include="CountWin.cs" />

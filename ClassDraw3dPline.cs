@@ -22,8 +22,8 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
     public class ClassDraw3dPline
     {
         GetTextbox textbox1 = new GetTextbox();
-
-        [CommandMethod("U84Draw3dPline")]
+        //
+        [CommandMethod("U_83Draw3dPline")]
         public void Draw3dPline()
         {
 
@@ -62,23 +62,31 @@ namespace Autocad_Draw_3D_Polyline_26_04_2024
                         foreach (string itemLayer in GetTextbox.layList)
                         {
                             LayerTable lt = (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead);
-
-                            if (lt.Has(itemLayer.ToString()))
+                            try
                             {
+                                if (lt.Has(itemLayer.ToString()))
+                                {
 
-                                MessageBox.Show("Такой слой уже есть!" + "   " + itemLayer.ToString() + "   " + "Закрываем приложение");
-                                //System.Windows.Application.Current.Shutdown();
+                                    MessageBox.Show("Такой слой уже есть!" + "   " + itemLayer.ToString() + "   " + "Закрываем приложение");
+                                    //System.Windows.Application.Current.Shutdown();
+                                }
+                                else
+                                {
+                                    doc.Editor.WriteMessage("рисуем полилинию");
+                                    LayerTableRecord ltr = new LayerTableRecord();
+                                    ltr.Name = itemLayer.ToString().Trim();
+                                    lt.UpgradeOpen();
+                                    ObjectId ltId = lt.Add(ltr);
+                                    tr.AddNewlyCreatedDBObject(ltr, true);
+                                    db.Clayer = ltId;
+                                }
                             }
-                            else
+                            catch (System.Exception ex)
                             {
-                                doc.Editor.WriteMessage("рисуем полилинию");
-                                LayerTableRecord ltr = new LayerTableRecord();
-                                ltr.Name = itemLayer.ToString().Trim();
-                                lt.UpgradeOpen();
-                                ObjectId ltId = lt.Add(ltr);
-                                tr.AddNewlyCreatedDBObject(ltr, true);
-                                db.Clayer = ltId;
+                                MessageBox.Show("проверьте имена слоёв" +  ex.Message);
                             }
+
+                           
                             // координаты, потом будем передавать списком
                             Point3dCollection pointUser3d = new Point3dCollection();
                             // передаем первую точку в координаты
